@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main()
+{
+    int i, j, s, n;
+    printf("Enter a number:\n");
+    scanf("%d", &n);
+
+    /*	
+	star pattern #5
+
+     *
+    * * 
+   * * * 
+  * * * * 
+ * * * * * 
+  * * * * 
+   * * * 
+    * * 
+     * 
+		
+	*/
+    for (i = 1; i <= 2 * n - 1; i++)
+    {
+        int col = i > n ? 2 * n - i : i;
+        int spaces = n - col;
+
+        for (int s = 1; s <= spaces; s++)
+        {
+            printf(" ");
+        }
+
+        for (int j = 1; j <= col; j++)
+        {
+            printf("* ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
